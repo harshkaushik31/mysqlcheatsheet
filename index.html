@@ -94,6 +94,81 @@
                 <strong>Searching for NULL</strong>
                 <pre class="language-sql"><code>SELECT * FROM EMPLOYEE WHERE ENAME IS NULL;</code></pre>
             </li>
+            <li>
+                <strong>Sorting the Results</strong>
+                <pre class="language-sql"><code>SELECT * FROM EMPLOYEE ORDER BY ENAME;</code></pre>
+            </li>
+            <li>
+                <strong>Modifing data in table</strong>
+                <pre class="language-sql"><code>UPDATE EMPLOYEE SET SALARY = 5000 WHERE ECODE = 102;</code></pre>
+            </li>
+            <li>
+                <strong>Modifing multiple data in table</strong>
+                <pre class="language-sql"><code>UPDATE EMPLOYEE SET SALARY = 5000, GRADE ='B1' WHERE ECODE = 102;</code></pre>
+            </li>
+            <li>
+                <strong>Deleting data from table</strong>
+                <pre class="language-sql"><code>DELETE FROM EMPLOYEE WHERE ECODE = 109;</code></pre>
+            </li>
+            <li>
+                <strong>Deleting all data from table</strong>
+                <pre class="language-sql"><code>DELETE FROM EMPLOYEE;</code></pre>
+            </li>
+            <li>
+                <strong>Deleting the table</strong>
+                <pre class="language-sql"><code>DROP TABLE EMPLOYEE;</code></pre>
+            </li>
+            <li>
+                <strong>Adding column to table</strong>
+                <pre class="language-sql"><code>ALTER TABLE EMPLOYEE ADD ADDRESS varchar(50);</code></pre>
+            </li>
+            <li>
+                <strong>Modifing column in table</strong>
+                <pre class="language-sql"><code>ALTER TABLE EMPLOYEE MODIFY GRADE VARCHAR(20);<code></pre>
+            </li>
+            <li>
+                <strong>Deleting column in table</strong>
+                <pre class="language-sql"><code>ALTER TABLE EMPLOYEE DROP GRADE;<code></pre>
+            </li>
+            <li>
+                <strong>Adding constraints to column in table</strong>
+                <pre class="language-sql"><code>ALTER TABLE EMPLOYEE ADD PRIMARY KEY (ECODE);<code></pre>
+            </li>
+            <li>
+                <strong>Removing constraints to column in table</strong>
+                <pre class="language-sql"><code>ALTER TABLE EMPLOYEE DROP PRIMARY KEY (ECODE);<code></pre>
+            </li>
+            <li>
+                <strong>Calculating the Average of a Column</strong>
+                <pre class="language-sql"><code>SELECT AVG(SALARY) FROM EMPLOYEE;<code></pre>
+            </li>
+            <li>
+                <strong>Calculating the Count of all the elements in a Column</strong>
+                <p>If you specify the COLUMN name in parenthesis of function, then this function returns rows where COLUMN 
+                    is not null.
+                    <br>If you specify the asterisk (*), this function returns all rows, including duplicates and nulls</p>
+                <pre class="language-sql"><code>SELECT COUNT(*) FROM EMPLOYEE;<code></pre>
+            </li>
+            <li>
+                <strong>Calculating the Maximum of a Column</strong>
+                <pre class="language-sql"><code>SELECT MAX(SALARY) FROM EMPLOYEE;<code></pre>
+            </li>
+            <li>
+                <strong>Calculating the Minimum of a Column</strong>
+                <pre class="language-sql"><code>SELECT MIN(SALARY) FROM EMPLOYEE;<code></pre>
+            </li>
+            <li>
+                <strong>Calculating the Sum of a Column</strong>
+                <pre class="language-sql"><code>SELECT SUM(SALARY) FROM EMPLOYEE;<code></pre>
+            </li>
+            <li>
+                <strong>Grouping Result</strong>
+                <pre class="language-sql"><code>SELECT * FROM EMPLOYEE GROUP BY JOB;<code></pre>
+            </li>
+            <li>
+                <strong>Placing condition on group</strong>
+                <pre class="language-sql"><code>SELECT JOB, COUNT(*) FROM EMPLOYEE GROUP BY JOB HAVING COUNT(*) < 2 ;<code></pre>
+            </li>
         </ol>
     </main>
     <script src="prism.js"></script>
