@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+    <title>MySQL CheatSheet</title>
+</head>
+<body>
+    <nav>
+        <span class="logo"><img src="logo.jpg" alt=""></span>
+        <div class="heading">
+            <h1>MySQL CheatSheet by Harsh Kaushik</h1>
+        </div>
+    </nav>
+    <main class="container">
+        <ol>
+            <li>
+                <strong>Creating Database in MySQL</strong>
+                <pre class="language-sql"><code>CREATE DATABASE &lt;database name&gt;;</code></pre>
+            </li>
+            <li>
+                <strong>View Existing Database in MySQL</strong>
+                <pre class="language-sql"><code>SHOW DATABASE &lt;database name&gt;;</code></pre>
+            </li>
+            <li>
+                <strong>Accessing Database in MySQL</strong>
+                <pre class="language-sql"><code>USE DATABASE &lt;database name&gt;;</code></pre>
+            </li>
+            <li>
+                <strong>Deleting Database in MySQL</strong>
+                <pre class="language-sql"><code>DROP DATABASE &lt;database name&gt;;</code></pre>
+            </li>
+            <li>
+                <strong>Viewing Table in MySQL</strong>
+                <pre class="language-sql"><code>CREATE DATABASE &lt;database name&gt;;</code></pre>
+            </li>
+            <li>
+                <strong>Creating Table in MySQL</strong>
+                <pre class="language-sql"><code>CREATE TABLE EMPLOYEE(ECODE integer, ENAME varchar(50), GENDER char(1),GRADE char(2), SALARY float(7,2) );</code></pre>
+            </li>
+            <li>
+                <strong>Inserting Data into table in MySQL</strong>
+                <pre class="language-sql"><code>INSERT INTO EMPLOYEE VALUES(101, 'HARSH KAUSHIK', 'M', 'A1', 9999999.99)</code></pre>
+            </li>
+            <li>
+                <strong>Inserting NULL values</strong>
+                <pre class="language-sql"><code>INSERT INTO EMPLOYEE VALUES(102,NULL,'M','B2',NULL);</code></pre>
+            </li>
+            <li>
+                <strong>Show all data in a table</strong>
+                <pre class="language-sql"><code>SELECT * FROM EMPLOYEE;</code></pre>
+            </li>
+            <li>
+                <strong>Select particular column in MySQL</strong>
+                <pre class="language-sql"><code>SELECT ENAME, SALARY FROM EMPLOYEE ;</code></pre>
+            </li>
+            <li>
+                <strong>Select a particular row in a table</strong>
+                <pre class="language-sql"><code>SELECT * FROM EMPLOYEE WHERE GENDER='M';</code></pre>
+            </li>
+            <li>
+                <strong>Select distinct data in a table</strong>
+                <pre class="language-sql"><code>SELECT DISTICT(ENAME) FROM EMPLOYEE;</code></pre>
+            </li>
+            <li>
+                <strong>View Structure of a table</strong>
+                <pre class="language-sql"><code>DESC &lt;table_name&gt;;</code></pre>
+            </li>
+            <li>
+                <strong>Using Column Alias</strong>
+                <pre class="language-sql"><code>SELECT ECODE AS "EMPLOYEE_CODE" FROM EMPLOYEE;</code></pre>
+            </li>
+            <li>
+                <strong>Select condition based on range</strong>
+                <pre class="language-sql"><code>SELECT * FROM EMPLOYEE WHERE SALARY BETWEEN 50000 AND 10000;</code></pre>
+            </li>
+            <li>
+                <strong>Select condition based on list</strong>
+                <pre class="language-sql"><code>SELECT * FROM EMPLOYEE WHERE GRADE IN ('A1', 'A2');</code></pre>
+            </li>
+            <li>
+                <strong>Select condition based on pattern</strong>
+                <p>Name starts from H</p>
+                <pre class="language-sql"><code>SELECT * FROM EMPLOYEE WHERE ENAME LIKE 'H%';</code></pre>
+                <p>Name second letter is A</p>
+                <pre class="language-sql"><code>SELECT * FROM EMPLOYEE WHERE ENAME LIKE '_A%';</code></pre>
+            </li>
+            <li>
+                <strong>Searching for NULL</strong>
+                <pre class="language-sql"><code>SELECT * FROM EMPLOYEE WHERE ENAME IS NULL;</code></pre>
+            </li>
+        </ol>
+    </main>
+    <script src="prism.js"></script>
+</body>
+</html>
